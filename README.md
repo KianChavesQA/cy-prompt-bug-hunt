@@ -1,3 +1,3 @@
 # cy-prompt-bug-hunt
 
-TBD.
+Cy.Prompt Community Bug Hunt.
