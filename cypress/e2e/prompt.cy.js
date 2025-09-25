@@ -142,5 +142,20 @@ describe('Cy.Prompt Community Bug Hunt', () => {
         'And I see the "Back to Store" button'
       ])
     })
+
+    it('counts before and after search items', () => {
+      cy.prompt([
+        'Given I am at https://emoji-mart-one.vercel.app/',
+      ])
+      // And I see six emoji cards
+      cy.get('[data-testid="emoji-card"]').should('have.length', 6)
+      cy.prompt([
+        'When I type "Rocket" in the input with placeholder "Search emojis..."',
+      ])
+      // Then I see only one emoji card, for the searched term
+      cy.get('[data-testid="emoji-card"]')
+        .should('have.length', 1)
+        .and('contain.text', 'Rocket')
+    })
   })
 })
