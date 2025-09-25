@@ -180,5 +180,16 @@ describe('Cy.Prompt Community Bug Hunt', () => {
         // 'Then the open shopping cart button should not be covered',
       ])
     })
+
+    it('sees a smile details page and goes back to the emoji list', () => {
+      cy.prompt([
+        'Given I am at https://emoji-mart-one.vercel.app/',
+        'When I click the "Similing Face" item',
+        'Then I see the "Smiling Face" emoji details',
+        'When I click "Back to all emojis"',
+      ])
+      // Then I see six elements with the "data-testid" attribute with the value "emoji-card"
+      cy.get('[data-testid="emoji-card"').should('have.length', 6)
+    })
   })
 })
