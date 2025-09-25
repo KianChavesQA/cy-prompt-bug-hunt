@@ -157,5 +157,28 @@ describe('Cy.Prompt Community Bug Hunt', () => {
         .should('have.length', 1)
         .and('contain.text', 'Rocket')
     })
+
+    it('removes an emoji from the shopping cart', () => {
+      cy.prompt([
+        'Given I am at https://emoji-mart-one.vercel.app/',
+        'When I click the first "Add to Cart" button',
+        'Then the shopping cart counter shows "1"',
+        'When I open the shopping cart',
+        'Then I see an element with "data-testid" equal to "cart-item" inside the "Your Cart" right-side bar panel',
+        'When I click the trash button',
+        'Then I see the empty state (i.e., "Your cart is empty")',
+      ])
+    })
+
+    it('opens and closes the shopping cart', () => {
+      cy.prompt([
+        'Given I am at https://emoji-mart-one.vercel.app/',
+        'When I open the shopping cart',
+        'Then I see the my cart (i.e., "Your Cart")',
+        'When I close the shopping cart',
+        'Then I see the open shopping cart button again',
+        // 'Then the open shopping cart button should not be covered',
+      ])
+    })
   })
 })
