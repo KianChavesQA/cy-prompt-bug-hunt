@@ -1,10 +1,8 @@
 describe('Cy.Prompt Community Bug Hunt', () => {
   context('EngageSphere', () => {
     beforeEach(() => {
-      cy.prompt([
-        'Visit https://engage-sphere.vercel.app/',
-        'Click the "Accept" button from the cookies consent banner'
-      ])
+      cy.setCookie('cookieConsent', 'accepted')
+      cy.visit('https://engage-sphere.vercel.app/')
     })
 
     it('shows the custom greeting (e.g., Hi Rick!)', () => {
