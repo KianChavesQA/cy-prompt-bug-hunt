@@ -181,7 +181,7 @@ describe('Cy.Prompt Community Bug Hunt', () => {
       ])
     })
 
-    it('sees a smile details page and goes back to the emoji list', () => {
+    it('sees the smiling face details page and goes back to the emojis list', () => {
       cy.prompt([
         'Given I am at https://emoji-mart-one.vercel.app/',
         'When I click the "Similing Face" item',
