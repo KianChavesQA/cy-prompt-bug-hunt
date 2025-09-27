@@ -189,31 +189,31 @@ describe('Cy.Prompt Community Bug Hunt', () => {
       // Then I see six elements with the "data-testid" attribute with the value "emoji-card"
       cy.get('[data-testid="emoji-card"').should('have.length', 6)
     })
+  })
 
-    context('CAC TAT', () => {
-      it('submete o formulário com sucesso', () => {
-        cy.prompt([
-          'Dado que visito a página https://cac-tat-v3.s3.eu-central-1.amazonaws.com/index.html',
-          'Quando preencho o campo "Nome" com um nome qualquer',
-          'E preencho o campo "Sobrenome" com um sobrenome qualquer',
-          'E preencho o campo "Email" com um email com formatação válida',
-          'E preencho o campo de área de texto com uma mensagem exemplo',
-          'E clico no botão "Enviar"',
-          'Então vejo a seguinte mensagem de sucesso: "Mensagem enviada com sucesso."'
-        ])
-      })
+  context('CAC TAT', () => {
+    it('submete o formulário com sucesso', () => {
+      cy.prompt([
+        'Dado que visito a página https://cac-tat-v3.s3.eu-central-1.amazonaws.com/index.html',
+        'Quando preencho o campo "Nome" com um nome qualquer',
+        'E preencho o campo "Sobrenome" com um sobrenome qualquer',
+        'E preencho o campo "Email" com um email com formatação válida',
+        'E preencho o campo de área de texto com uma mensagem exemplo',
+        'E clico no botão "Enviar"',
+        'Então vejo a seguinte mensagem de sucesso: "Mensagem enviada com sucesso."'
+      ])
+    })
 
-      it('exibe erro ao submeter o formuário com um email com formatação inválida', () => {
-        cy.prompt([
-          'Dado que visito a página https://cac-tat-v3.s3.eu-central-1.amazonaws.com/index.html',
-          'Quando preencho o campo "Nome" com um nome qualquer',
-          'E preencho o campo "Sobrenome" com um sobrenome qualquer',
-          'E preencho o campo "Email" com um email com formatação inválida',
-          'E preencho o campo de área de texto com uma mensagem exemplo',
-          'E clico no botão "Enviar"',
-          'Então vejo a seguinte mensagem de erro: "Valide os campos obrigatórios!"'
-        ])
-      })
+    it('exibe erro ao submeter o formuário com um email com formatação inválida', () => {
+      cy.prompt([
+        'Dado que visito a página https://cac-tat-v3.s3.eu-central-1.amazonaws.com/index.html',
+        'Quando preencho o campo "Nome" com um nome qualquer',
+        'E preencho o campo "Sobrenome" com um sobrenome qualquer',
+        'E preencho o campo "Email" com um email com formatação inválida',
+        'E preencho o campo de área de texto com uma mensagem exemplo',
+        'E clico no botão "Enviar"',
+        'Então vejo a seguinte mensagem de erro: "Valide os campos obrigatórios!"'
+      ])
     })
   })
 
