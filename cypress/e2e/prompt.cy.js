@@ -7,8 +7,8 @@ describe('Cy.Prompt Community Bug Hunt', () => {
 
     it('shows the custom greeting (e.g., Hi Rick!)', () => {
       cy.prompt([
-        'Fill in the input with placeholder E.g., John Doe with Rick',
-        'Ensure a customized greeting containing Hi Rick! is displayed in an h2'
+        'Fill in the input with placeholder "E.g., John Doe" with the value "Rick"',
+        'Ensure a customized greeting containing "Hi Rick!" is displayed in an h2'
       ])
     })
 
