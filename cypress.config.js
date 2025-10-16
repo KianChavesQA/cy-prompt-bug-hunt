@@ -1,7 +1,7 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
-  projectId: "496opc",
+  projectId: "ck8cw4",
   e2e: {
     experimentalPromptCommand: true,
     fixturesFolder: false,

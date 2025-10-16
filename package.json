@@ -2,11 +2,6 @@
   "name": "cy-prompt-bug-hunt",
   "version": "1.0.0",
   "description": "Cy.Prompt Community Bug Hunt.",
-  "main": "cypress.config.js",
-  "scripts": {
-    "cy:open": "cypress open",
-    "test": "cypress run"
-  },
   "keywords": [
     "cypress",
     "prompt-engineering",
@@ -14,8 +9,22 @@
     "testing",
     "talking-about-testing"
   ],
-  "author": "Walmyr <wlsf82@gmail.com> (https://walmyr.dev/)",
+  "homepage": "https://github.com/KianChavesQA/cy-prompt-bug-hunt#readme",
+  "bugs": {
+    "url": "https://github.com/KianChavesQA/cy-prompt-bug-hunt/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KianChavesQA/cy-prompt-bug-hunt.git"
+  },
   "license": "MIT",
+  "author": "Walmyr <wlsf82@gmail.com> (https://walmyr.dev/)",
+  "type": "commonjs",
+  "main": "cypress.config.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "test": "cypress run"
+  },
   "devDependencies": {
     "cypress": "^15.4.0"
   }
